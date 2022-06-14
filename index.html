@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Currency Converter</title>
+    <link rel="icon" href="images/icon.png">
+    <meta property="og:image" content="https://imageup.me/images/61b35064-d238-49b9-9595-4878763a1503.png" />
+</head>
+
+<body class="body">
+    <div class="container">
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Kalkulator walut</legend>
+                <p class="form__paragraph"><label><span class="form__labelText">Wprowadź kwotę*:</span><input
+                            type="number" required min="0,01" step="0.01"
+                            class="form__input js-entryValueElement"></label></p>
+                <p class="form__paragraph"><label><span class="form__labelText">Przelicz z:</span>
+                        <select class="form__input js-convertFrom" name="entryCurrencies">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="GBP">GBP (Funt Brytyjski)</option>
+                            <option value="USD">USD (Dolar Amerykański)</option>
+                        </select></label>
+                </p>
+                <p class="form__paragraph"><label><span class="form__labelText">Przelicz na:</span>
+                        <select class="form__input js-convertTo" name="currencies">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="GBP">GBP (Funt Brytyjski)</option>
+                            <option value="USD">USD (Dolar Amerykański)</option>
+                        </select></label>
+                </p>
+                <p class="form__paragraph"><button class=" form__button js-button">Przelicz</button></p>
+                <p class="form__paragraph form__paragraph--result"><strong class="js-result"></strong></p>
+            </fieldset>
+        </form>
+        <p class="container__paragraph">Pole oznaczone gwiazdką jest wymagane.</p>
+    </div>
+</body>
+
+</html>
